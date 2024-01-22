@@ -1,0 +1,102 @@
+<ion-header collapse="fade" class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="camera-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="videocam-outline" color="dark"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="send-outline" color="dark" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>INSTAGRAM</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="none">
+    \
+    
+    <ion-list-header>
+      <ion-grid fixed *ngFor="let post of [1,2,3,4,5]">
+        <ion-row>
+          <ion-col size="12">
+            <ion-item class="ion-no-margin ion-no-padding">
+            <ion-avatar aria-hidden="true" slot="start">
+              <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" >
+            <ion-label>Usuario</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list-header>
+    <ion-item *ngFor="let post of [1,2,3,4,5]">
+      <ion-card class="ion-no-margin">
+
+        <!-- Banner usuario -->
+        <ion-item>
+          <ion-avatar aria-hidden="true" slot="start">
+            <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Usuario</ion-label>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon slot="icon-only" name="ellipsis-horizontal" color="dark" ></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <!-- Foto -->
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+
+        <!-- Opciones -->
+        <ion-item>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon slot="icon-only" name="heart-outline" color="dark" ></ion-icon>
+            </ion-button>
+            <ion-button>
+              <ion-icon slot="icon-only" name="chatbubble-outline" color="dark" ></ion-icon>
+            </ion-button>
+            <ion-button>
+              <ion-icon slot="icon-only" name="send-outline" color="dark" ></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon slot="icon-only" name="bookmark-outline" color="dark" ></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <!-- Descripción -->
+        <ion-card-content>
+          <ion-chip class="ion-no-margin" color="transparent">
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label>Le ha gustado a <strong>Fulanito Perez</strong> y a <strong>1,234 personas más</strong></ion-label>
+          </ion-chip>
+          <br>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
